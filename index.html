@@ -1,32 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Resume</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <header>
-        <div><h1>Taha's Resume</h1></div>
+        <div>
+            <h1>Taha's Resume</h1>
+        </div>
     </header>
     <main>
-         <section class="persnol info">
+        <section class="persnol info">
             <h2>Persnol Information</h2>
-            <img src="./profile2.jpg" alt="Profile Picture" class="profile-pic" >
+            <img src="./profile2.jpg" alt="Profile Picture" class="profile-pic">
             <p><strong>Name:</strong>Taha Khan.</p>
             <p><strong>Age:</strong>19 years old.</p>
-           <p><strong>Email:</strong><address><a href="mailto:tahakhalid317@gmail.com">tahakhalid317@gmail.com</a></address></p>
-           <p><strong>Phone:</strong><address><a href="tel:+92 317 8100399">+92 317 8100399</a></address></p>
-         </section>
+            <p><strong>Email:</strong>
+            <address><a href="mailto:tahakhalid317@gmail.com">tahakhalid317@gmail.com</a></address>
+            </p>
+            <p><strong>Phone:</strong>
+            <address><a href="tel:+92 317 8100399">+92 317 8100399</a></address>
+            </p>
+        </section>
 
-         <section class="education">
+        <section class="education">
             <h2>Education</h2>
-            <p>I've done my <em><abbr title=" Secondary School Certificate">SSC</abbr></em> from <em><abbr title=" Board of Secondary Education, Karachi">BSEK</abbr></em>. Currently I'm doing <em><abbr title="Higher Secondary Certificate">HSC</abbr></em> from <em><abbr title="Board of Intermediate Education Karachi">BIEK</abbr></em>.</p>
-            <p><strong>Web Development:</strong>Currently learning from <em><abbr title="Governor Sindh Kamran Khan Tessori Initiative for Artificial Intelligence, Web 3.0 & Metaverse">GIAIC</abbr></em>.</p>
-         </section>
+            <p>I've done my <em><abbr title=" Secondary School Certificate">SSC</abbr></em> from <em><abbr
+                        title=" Board of Secondary Education, Karachi">BSEK</abbr></em>. Currently I'm doing <em><abbr
+                        title="Higher Secondary Certificate">HSC</abbr></em> from <em><abbr
+                        title="Board of Intermediate Education Karachi">BIEK</abbr></em>.</p>
+            <p><strong>Web Development:</strong>Currently learning from <em><abbr
+                        title="Governor Sindh Kamran Khan Tessori Initiative for Artificial Intelligence, Web 3.0 & Metaverse">GIAIC</abbr></em>.
+            </p>
+        </section>
 
-         <section class="skills">
+        <section class="skills">
             <h2>Skills</h2>
             <ul>
                 <li>HTML</li>
@@ -34,20 +47,52 @@
                 <li>Typescript</li>
             </ul>
             <button id="toggle-skills">Toggle Skills</button>
-         </section>
+        </section>
 
         <section class="experience">
-             <h2>Work Experience</h2>
-             <p><strong>Salesperson - [Platinio Ltd]</strong></p>
-             <p><strong>Duration: 1 month</strong></p>
+            <h2>Work Experience</h2>
+            <p><strong>Salesperson - [Platinio Ltd]</strong></p>
+            <p><strong>Duration: 1 month</strong></p>
             <ul>
                 <li>Engaged in client hunting, identifying potential business leads and fostering relationships.</li>
                 <li>Collaborated with the sales and development teams to better understand client requirements.</li>
                 <li>Assisted in creating client proposals and presenting software solutions to potential customers.</li>
             </ul>
         </section>
+        
+        <form id="resume-form">
+            <h2>Create Your Resume</h2>
+    
+            <label for="name">Name</label>
+            <input type="text"  id="name" placeholder="Enter Your Name" required><br><br>
+    
+            <label for="age">Age</label>
+            <input type="number"  id="age" placeholder="Enter Your Age" required><br><br>
+    
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter Your email" required><br><br>
+    
+            <label for="education">Education</label>
+            <input type="text" id="education" placeholder="Enter Your Education " required><br><br>
+    
+            <label for="skills">Skills</label>
+            <input type="text" id="skills" placeholder="Enter Your Skills" required><br><br>
+    
+            <label for="experience">Experience</label>
+            <input type="text" id="experience" placeholder="Provide Your Experience" required><br><br>
+    
+            <button type="submit">Generate Resume</button>
+            <button type="reset">Reset Form</button>
+        </form>
+    
+        <section id="generated-resume">
+            <h2>Generated Resume</h2>
+            <div id="resume-content"></div>
+        </section>
 
+        
     </main>
     <script src="app.js" defer></script>
 </body>
+
 </html>
