@@ -31,3 +31,22 @@ form.addEventListener('submit', (e) => {
         <p><strong>Experience:</strong> ${experience}</p>
     `;
 });
+
+
+resumeContent.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+    if (target.tagName === 'P' || target.tagName === 'LI') {
+         const input = document.createElement('input');
+        let value = target.innerText;
+        if (target.tagName === 'LI') {
+            value = value.trim();
+        }
+        input.value = value;
+        target.innerHTML = `<strong>${target.innerText.split(': ')[0]}:</strong> `;
+        target.appendChild(input);
+
+        input.addEventListener('blur', () => {
+            target.innerHTML = `<strong>${target.innerText.split(': ')[0]}:</strong> ${input.value}`;
+        });
+    }
+});
